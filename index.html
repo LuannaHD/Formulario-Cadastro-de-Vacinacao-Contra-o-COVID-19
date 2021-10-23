@@ -1,0 +1,128 @@
+   <!DOCTYPE HTML>
+   <html lang="pt-br">
+   <head>
+   <title>Cadastro de Vacinação Contra o COVID-19</title>
+   <meta charset="utf-8">
+   </head>
+    <body>
+   <header>
+   <h1>Formulário para Vacinação</h1>
+   <br>
+   <p>O formulário abaixo deve ser preenchido com os dados da pessoa que deve ser vacinada. Atenção ao preenchimento dos campos, pois ao finalizar o cadastro as informações não poderão ser alteradas.</p>
+   <br>
+   </header>
+   <main>
+   <form>
+   <fieldset>
+   <legend><h2>Dados Pessoais</h2></legend>
+   <label for="nome">* Nome Completo:</label>
+   <input type="text" name="camponome" id="nome" required>
+   <label for="nomesocial">Nome Social:</label>
+   <input type="text" name="camponomesocial" id="nomesocial">
+   <label for="cpf">* CPF:</label>
+   <input type="number" name="campocpf" placeholder="Digite apenas números:" id="cpf" required>
+   <label for="rg">* RG:</label>
+   <input type="text" name="camporg" id="rg" required>
+   <label for="datanascimento">* Data de Nascimento:</label>
+   <input type="date" name="campodata" id="datanascimento" required>
+   <label for="tel">* Celular:</label>
+   <input type="tel" name="campocelular" id="tel" placeholder="Informe o número com DDD." required>
+   <label for="email"> * E-mail:</label>
+   <input type="email" name="campoemail" placeholder="Informe um e-mail válido:" id="email" required>
+   </fieldset>
+   <br>
+   <fieldset>
+   <legend><h2>Gênero</h2></legend>
+   <label for="sf">Feminino</label> <input type="radio" name="sexo" id="sf">
+   <br>
+   <label for="sm">Masculino</label> <input type="radio" name="sexo" id="sm">
+   </fieldset>
+   <br>
+   <fieldset>
+   <legend><h2>Endereço</h2></legend>
+   <label for="cep">* CEP:</label>
+   <input type="number name="campocep"" placeholder="Informe somente números:" id="cep" required>
+   <label for="rua">* Rua:</label>
+   <input type="text" name="camporua" id="rua" required>
+   <label for="bairro">* bairro:</label>
+   <input type="text" name="campobairro" id="bairro" required>
+   <label for="numero">* Número:</label>
+   <input type="number" name="camponumero" id="numero" required>
+   <label for="complemento">Complemento:</label>
+   <input type="text" name="campocomplemento" placeholder="Ex: casa, apartamento, bloco." id="complemento">
+   <label for="cidade">* Cidade:</label>
+   <input type="text" name="campocidade" id="cidade" required>
+    <label for="estado">* Estado:</label>
+    <select name="estado" id="estado"> 
+    <option>...</option>
+    <option value="ac">Acre</option> 
+    <option value="al">Alagoas</option> 
+    <option value="am">Amazonas</option> 
+    <option value="ap">Amapá</option> 
+    <option value="ba">Bahia</option> 
+    <option value="ce">Ceará</option> 
+    <option value="df">Distrito Federal</option> 
+    <option value="es">Espírito Santo</option> 
+    <option value="go">Goiás</option> 
+    <option value="ma">Maranhão</option> 
+    <option value="mt">Mato Grosso</option> 
+    <option value="ms">Mato Grosso do Sul</option> 
+    <option value="mg">Minas Gerais</option> 
+    <option value="pa">Pará</option> 
+    <option value="pb">Paraíba</option> 
+    <option value="pr">Paraná</option> 
+    <option value="pe">Pernambuco</option> 
+    <option value="pi">Piauí</option> 
+    <option value="rj">Rio de Janeiro</option> 
+    <option value="rn">Rio Grande do Norte</option> 
+    <option value="ro">Rondônia</option> 
+    <option value="rs">Rio Grande do Sul</option> 
+    <option value="rr">Roraima</option> 
+    <option value="sc">Santa Catarina</option> 
+    <option value="se">Sergipe</option> 
+    <option value="sp">São Paulo</option> 
+    <option value="to">Tocantins</option> 
+   </select>
+   </fieldset>
+   <br>
+   <fieldset>
+   <legend><h2>Motivo da Vacina</h2></legend>
+   <label for="acamado">Acamado</label> <input type="checkbox" name="acamado" id="acamado">
+   <label for="deficiente">Deficiente</label> <input type="checkbox" name="deficiente" id="deficiente">
+   <label for="gestante">Gestante/Puérpera</label> <input type="checkbox" name="gestante" id="gestante">
+   <label for="comorbidade">Comorbidade</label> <input type="checkbox" name="comorbidade" id="comorbidade">
+   </fieldset>
+   <label for="doc">Documento obrigatório</label>
+   <select name="campodocumento" id="doc" required>
+   <option value="01">...</option>
+   <option value="02">Láudo médico</option>
+   <option value="03">Documento de identidade</option>
+   </select>
+   <input type="file" name="anexararquivo" id="arquivo" value="anexararquivo">
+   <br>
+   <br>
+   <label for="obs">Observação:</label>
+   <textarea name="obs" placeholder="Digite aqui:" id="obs"> </textarea>
+   <br>
+   <input type="submit" name="enviardados" value="enviar" onclick="mensagem();">
+   <br>
+   <br>
+   <br>
+   </form>
+   </main>
+   <footer>
+   <p>© Desafio final Gama Academy Trilha preparatória Formação Itaú Tech.</p>
+   </footer>
+   <script>
+   function mensagem() {
+   if (confirm("Deseja enviar? Ao proceguir você concorda e está ciente de que todas as informações estão corretas.")) {
+   return true;
+   }
+   else {
+   return false;
+   }
+   }
+   </script>
+
+    </body>
+    </html>
